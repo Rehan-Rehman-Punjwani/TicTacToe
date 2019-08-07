@@ -107,6 +107,14 @@ public class MainActivity extends AppCompatActivity {
             Winner =1;
         if(Player2.contains(3) && Player2.contains(6) && Player2.contains(9))
             Winner =2;
+        if(Player1.contains(1) && Player1.contains(5) && Player1.contains(9))
+            Winner =1;
+        if(Player2.contains(1) && Player2.contains(5) && Player2.contains(9))
+            Winner =2;
+        if(Player1.contains(7) && Player1.contains(5) && Player1.contains(3))
+            Winner =1;
+        if(Player2.contains(7) && Player2.contains(5) && Player2.contains(3))
+            Winner =2;
 
     if(Winner != -1){
 
@@ -137,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if(emptyCells.size() == 0){
+            Toast.makeText(this,"Draw",Toast.LENGTH_LONG).show();
             this.recreate();
             return;
         }
